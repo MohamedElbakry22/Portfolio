@@ -1,0 +1,145 @@
+.opt1{
+    color: white;
+}
+.opt1:hover{
+    color: #ff2646;
+}
+.td{
+    width: fit-content !important;
+}
+.skills{
+    position: relative;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+}
+.skills h1{
+    color: #ff2646;
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 90px;
+}
+.skills h1::before,.skills h1::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills h1::before{
+    width: 190px;
+    height: 2px;
+    bottom: -30px;
+    background-color: #ff2646;
+}
+.skills h1::after{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff2646;
+    bottom: -40px;
+    background-color: black;
+    border-radius: 50%;
+}
+.skill-cont{
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 120px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+}
+@media (max-width: 1290px) {
+    .skill-cont{
+        gap: 80px 20px !important;
+    }
+}
+@media (max-width: 992px) {
+    .skill-cont{
+        gap: 10px 20px !important;
+        overflow-y: scroll;
+    }
+    .skill-cont::-webkit-scrollbar{
+        display: none;
+    }
+    .skills h1{
+        font-size: 40px;
+        margin-bottom: 50px !important;
+    }
+    .skills h1::after{
+        width: 15px;
+        height: 15px;
+        bottom: -37px;
+    }
+    .skill .indicator{
+        width: 250px !important;
+        left: 15px !important;
+    }
+    .skill p{
+        margin-left: -15px !important;
+    }
+}
+.td{
+    left: unset !important;
+    right: -35px !important;
+}
+.skill{
+    width: 300px;
+}
+.skill p{
+    text-align: center;
+}
+.skill .indicator{
+    width: 300px;
+    height: 15px;
+    background-color: white;
+    border-radius: 5px;
+    z-index: -1;
+    /* overflow: hidden; */
+    position: relative;
+}
+.skill .indicator::before{
+    content: "";
+    background-color: #ff2646;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.skill .indicator::after{
+    content: attr(percent);
+    width: 0;
+    height: 0;
+    color: #ff2646;
+    position: absolute;
+    left: 90%;
+    transform: translateX(-50%);
+    top: -25px;
+}
+.html::before{
+    width: 90%;
+}
+.css::before{
+    width: 80%;
+}
+.js::before{
+    width: 85%;
+}
+.react::before{
+    width: 50%;
+}
+.boot::before{
+    width: 75%;
+}
+.java::before{
+    width: 45%;
+}
+.sql::before{
+    width: 30%;
+}
+.ps::before{
+    width: 60%;
+}
